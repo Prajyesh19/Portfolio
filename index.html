@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prajyesh's Portfolio</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lobster&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .logo-font {
+      font-family: 'Lobster', cursive;
+    }
+    .section-title {
+      position: relative;
+      padding-bottom: 0.5rem;
+      margin-bottom: 2rem;
+      font-size: 1.75rem;
+      font-weight: 600;
+      color: #fff;
+    }
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 4px;
+      background-color: #6366f1;
+      border-radius: 9999px;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-900 text-gray-200 selection:bg-indigo-500 selection:text-white">
+
+
+  <!-- Navbar -->
+  <header class="bg-gray-800 shadow-md sticky top-0 z-50">
+    <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <!-- Logo -->
+      <a href="#home" class="text-2xl font-bold logo-font text-indigo-400">
+        Portfolio
+      </a>
+      <!-- Links -->
+      <ul class="hidden md:flex space-x-6">
+        <li><a href="#about" class="text-gray-300 hover:text-indigo-400 transition">About</a></li>
+        <li><a href="#skills" class="text-gray-300 hover:text-indigo-400 transition">Skills</a></li>
+        <li><a href="#projects" class="text-gray-300 hover:text-indigo-400 transition">Projects</a></li>
+        <li><a href="#contact" class="text-gray-300 hover:text-indigo-400 transition">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+<!-- Hero -->
+<section id="home" class="py-24 md:py-32">
+  <div class="container mx-auto px-4 text-center">
+    <div class="p-8 bg-gray-800 rounded-2xl shadow-xl max-w-3xl mx-auto">
+
+      <!-- Line 1 -->
+      <h1 class="typing-line line1">
+        I'm <span class="name">Venkat Prajyesh</span>
+      </h1>
+
+      <!-- Line 2 (word by word description, smooth typing effect) -->
+      <p class="line2">
+        <span class="word">A</span>
+        <span class="word">passionate</span>
+        <span class="word">first-year</span>
+        <span class="word">CSE-AI/DS</span>
+        <span class="word">student</span>
+        <span class="word">at</span>
+        <span class="word">NXT</span>
+        <span class="word">Wave</span>
+        <span class="word">Institute</span>
+        <span class="word">of</span>
+        <span class="word">Technology,</span><br>
+        <span class="word">aspiring</span>
+        <span class="word">web</span>
+        <span class="word">developer</span>
+        <span class="word">and</span>
+        <span class="word">AI</span>
+        <span class="word">enthusiast.</span>
+      </p>
+
+      <!-- Line 3 (button) -->
+      <div class="line3">
+        <a href="#contact" class="btn">Get In Touch</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* line1 typing effect */
+.typing-line {
+  display: inline-block;
+  border-right: 3px solid #6366f1;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+}
+.line1 {
+  animation: typing1 2s steps(22, end) forwards, blink .8s step-end infinite;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+  animation-fill-mode: forwards;
+}
+.line1.done {
+  border-right: none; /* removes cursor after typing */
+}
+.name {
+  font-family: 'Lobster', cursive;
+  font-size: 2.5rem;
+  color: #facc15;
+  margin-left: 5px;
+}
+
+/* description line */
+.line2 {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  color: #d1d5db;
+  line-height: 1.6;
+  max-width: 36ch;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.line2 .word {
+  opacity: 0;
+  display: inline-block;
+  margin-right: 0.4rem;
+  animation: fadeInWord 0.35s forwards ease-in-out;
+}
+.line2 .word:nth-child(1) { animation-delay: 2.0s; }
+.line2 .word:nth-child(2) { animation-delay: 2.1s; }
+.line2 .word:nth-child(3) { animation-delay: 2.2s; }
+.line2 .word:nth-child(4) { animation-delay: 2.3s; }
+.line2 .word:nth-child(5) { animation-delay: 2.4s; }
+.line2 .word:nth-child(6) { animation-delay: 2.5s; }
+.line2 .word:nth-child(7) { animation-delay: 2.6s; }
+.line2 .word:nth-child(8) { animation-delay: 2.7s; }
+.line2 .word:nth-child(9) { animation-delay: 2.8s; }
+.line2 .word:nth-child(10) { animation-delay: 2.9s; }
+.line2 .word:nth-child(11) { animation-delay: 3.0s; }
+.line2 .word:nth-child(12) { animation-delay: 3.1s; }
+.line2 .word:nth-child(13) { animation-delay: 3.2s; }
+.line2 .word:nth-child(14) { animation-delay: 3.3s; }
+.line2 .word:nth-child(15) { animation-delay: 3.4s; }
+.line2 .word:nth-child(16) { animation-delay: 3.5s; }
+.line2 .word:nth-child(17) { animation-delay: 3.6s; }
+
+/* button fade + slide in */
+.line3 {
+  opacity: 0;
+  margin-top: 2rem;
+  animation: fadeInButton 1s ease forwards;
+  animation-delay: 3.7s;
+}
+.btn {
+  display: inline-block;
+  background: #4f46e5;
+  color: white;
+  font-size: 1rem;
+  padding: 0.6rem 1.5rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.btn:hover {
+  background: #4338ca;
+  transform: scale(1.05);
+}
+
+/* keyframes */
+@keyframes typing1 {
+  from { width: 0 }
+  to { width: 22ch }
+}
+@keyframes blink {
+  50% { border-color: transparent }
+}
+@keyframes fadeInWord {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInButton {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+
+<script>
+/* Remove cursor after typing name */
+setTimeout(() => {
+  document.querySelector('.line1').classList.add('done');
+}, 4200); // after typing animation ends
+</script>
+
+  <!-- About -->
+  <section id="about" class="py-20">
+    <div class="container mx-auto px-4">
+      <h2 class="section-title text-3xl font-bold">About Me</h2>
+      <p class="text-lg text-gray-300 leading-relaxed max-w-3xl">
+        I am a first-year student at NXT Wave Institute of Technology pursuing Computer Science in AI & Data Science. 
+        I’m curious about web development, artificial intelligence, and data-driven problem solving. 
+        With a growth mindset, I continuously work on improving my skills and contributing to impactful projects.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="bg-gray-800 py-20">
+    <div class="container mx-auto px-4">
+      <h2 class="section-title text-3xl font-bold">My Skills</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 mt-8">
+        <div class="bg-gray-700 p-6 rounded-xl text-center shadow hover:shadow-lg transition transform hover:scale-105">
+          <span class="text-3xl mb-2 block">🖥️</span>
+          <h3 class="font-semibold text-lg">HTML5</h3>
+        </div>
+        <div class="bg-gray-700 p-6 rounded-xl text-center shadow hover:shadow-lg transition transform hover:scale-105">
+          <span class="text-3xl mb-2 block">🎨</span>
+          <h3 class="font-semibold text-lg">CSS3</h3>
+        </div>
+        <div class="bg-gray-700 p-6 rounded-xl text-center shadow hover:shadow-lg transition transform hover:scale-105">
+          <span class="text-3xl mb-2 block">🐍</span>
+          <h3 class="font-semibold text-lg">Python</h3>
+        </div>
+        <div class="bg-gray-700 p-6 rounded-xl text-center shadow hover:shadow-lg transition transform hover:scale-105">
+          <span class="text-3xl mb-2 block">⚡</span>
+          <h3 class="font-semibold text-lg">Tailwind CSS</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-20">
+    <div class="container mx-auto px-4">
+      <h2 class="section-title text-3xl font-bold">My Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+        <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition">
+          <h3 class="text-2xl font-bold mb-2">Order Program</h3>
+          <p class="text-gray-300 mb-4">
+            A food order app built using HTML, CSS, and JavaScript with AI integration via Base44.
+          </p>
+          <a href="https://app--mr-eatify-indian-canteen-b791c68b.base44.app/Menu" class="text-indigo-400 hover:text-indigo-300 font-semibold inline-flex items-center">
+            View Project
+            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M21 12H3"/>
+            </svg>
+          </a>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition">
+          <h3 class="text-2xl font-bold mb-2">Full AI</h3>
+          <p class="text-gray-300 mb-4">
+            A multi-chatbot AI app for solving different problems, built using Base44.
+          </p>
+          <a href="https://app--full-ai-aafb21e4.base44.app" class="text-indigo-400 hover:text-indigo-300 font-semibold inline-flex items-center">
+            View Project
+            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M21 12H3"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="bg-gray-800 py-20">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="section-title text-3xl font-bold inline-block mb-4">Contact Me</h2>
+      <p class="text-lg text-gray-300 mb-8 max-w-xl mx-auto">
+        I’m open to collaborations, internships, and exciting projects. Let’s connect!
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
+        <a href="mailto:your.email@example.com" class="flex items-center bg-indigo-600 text-white font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-indigo-700 transform hover:scale-105 transition">
+          ✉️ Email Me
+        </a>
+        <a href="https://linkedin.com/in/your-linkedin-profile" target="_blank" class="flex items-center bg-gray-700 text-white font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-gray-600 transform hover:scale-105 transition">
+          🔗 LinkedIn
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 py-6 border-t border-gray-700">
+    <div class="container mx-auto px-4 text-center">
+      <p>&copy; 2025 Venkat Prajyesh. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
