@@ -46,21 +46,72 @@
 
 
   <!-- Navbar -->
-  <header class="bg-gray-800 shadow-md sticky top-0 z-50">
-    <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-      <!-- Logo -->
-      <a href="#home" class="text-2xl font-bold logo-font text-indigo-400">
-        Portfolio
-      </a>
-      <!-- Links -->
-      <ul class="hidden md:flex space-x-6">
-        <li><a href="#about" class="text-gray-300 hover:text-indigo-400 transition">About</a></li>
-        <li><a href="#skills" class="text-gray-300 hover:text-indigo-400 transition">Skills</a></li>
-        <li><a href="#projects" class="text-gray-300 hover:text-indigo-400 transition">Projects</a></li>
-        <li><a href="#contact" class="text-gray-300 hover:text-indigo-400 transition">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<header class="bg-gray-800 shadow-md sticky top-0 z-50">
+  <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <!-- Logo -->
+    <a href="#home" class="text-2xl font-bold logo-font text-indigo-400">
+     Portfolio
+    </a>
+
+    <!-- Desktop Links -->
+    <ul class="hidden md:flex space-x-6">
+      <li><a href="#about" class="text-gray-300 hover:text-indigo-400 transition">About</a></li>
+      <li><a href="#skills" class="text-gray-300 hover:text-indigo-400 transition">Skills</a></li>
+      <li><a href="#projects" class="text-gray-300 hover:text-indigo-400 transition">Projects</a></li>
+      <li><a href="#contact" class="text-gray-300 hover:text-indigo-400 transition">Contact</a></li>
+    </ul>
+
+    <!-- Mobile Menu Button -->
+    <button id="menu-btn" class="md:hidden flex flex-col justify-center items-center space-y-1 focus:outline-none">
+      <span class="block w-7 h-0.5 bg-gray-300 transition-all duration-300"></span>
+      <span class="block w-7 h-0.5 bg-gray-300 transition-all duration-300"></span>
+      <span class="block w-7 h-0.5 bg-gray-300 transition-all duration-300"></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu (Slide Down) -->
+  <div id="mobile-menu" 
+       class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-gray-700 md:hidden">
+    <ul class="flex flex-col items-center space-y-4 py-6">
+      <li><a href="#about" class="text-gray-300 hover:text-indigo-400 transition">About</a></li>
+      <li><a href="#skills" class="text-gray-300 hover:text-indigo-400 transition">Skills</a></li>
+      <li><a href="#projects" class="text-gray-300 hover:text-indigo-400 transition">Projects</a></li>
+      <li><a href="#contact" class="text-gray-300 hover:text-indigo-400 transition">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- Script -->
+<script>
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const bars = menuBtn.querySelectorAll("span");
+
+  let isOpen = false;
+
+  menuBtn.addEventListener("click", () => {
+    isOpen = !isOpen;
+
+    // Slide menu
+    if (isOpen) {
+      mobileMenu.classList.remove("max-h-0");
+      mobileMenu.classList.add("max-h-screen");
+    } else {
+      mobileMenu.classList.remove("max-h-screen");
+      mobileMenu.classList.add("max-h-0");
+    }
+
+    // Animate bars → X
+    bars[0].classList.toggle("rotate-45", isOpen);
+    bars[0].classList.toggle("translate-y-2", isOpen);
+
+    bars[1].classList.toggle("opacity-0", isOpen);
+
+    bars[2].classList.toggle("-rotate-45", isOpen);
+    bars[2].classList.toggle("-translate-y-2", isOpen);
+  });
+</script>
+
 
 
 <!-- Hero -->
@@ -300,7 +351,7 @@ setTimeout(() => {
         <a href="mailto:your.email@example.com" class="flex items-center bg-indigo-600 text-white font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-indigo-700 transform hover:scale-105 transition">
           ✉️ Email Me
         </a>
-        <a href="https://linkedin.com/in/your-linkedin-profile" target="_blank" class="flex items-center bg-gray-700 text-white font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-gray-600 transform hover:scale-105 transition">
+        <a href="https://www.linkedin.com/in/prajyesh19" target="_blank" class="flex items-center bg-gray-700 text-white font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-gray-600 transform hover:scale-105 transition">
           🔗 LinkedIn
         </a>
       </div>
