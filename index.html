@@ -120,9 +120,45 @@
     <div class="p-8 bg-gray-800 rounded-2xl shadow-xl max-w-3xl mx-auto">
 
       <!-- Line 1 -->
-      <h1 class="typing-line line1">
-        I'm <span class="name">Venkat Prajyesh</span>
-      </h1>
+      <h1 class="typing font-extrabold text-indigo-400 mb-4 leading-snug 
+           text-2xl sm:text-3xl md:text-5xl break-words max-w-full text-center">
+  I'm <span class="name-font">Venkat Prajyesh</span>
+</h1>
+
+<style>
+  /* Typing animation without cursor */
+  .typing {
+    font-family: "Lucida Calligraphy", cursive;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    animation: typing 2.7s steps(30, end) forwards;
+    display: inline-block;
+  }
+
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+  /* Different font for the name */
+  .name-font {
+    font-family: "Lobster", cursive;
+    font-weight: bold;
+    color: #facc15; /* yellow accent */
+  }
+</style>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+
+
+
 
       <!-- Line 2 (word by word description, smooth typing effect) -->
       <p class="line2">
@@ -367,3 +403,4 @@ setTimeout(() => {
 
 </body>
 </html>
+
